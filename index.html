@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>月色真美,风也温柔 - 九天的小站</title>
+    <!-- 网站介绍 -->
+    <meta name="description" content=" ">
+    <!-- 网站关键字 -->
+    <meta name="keywords" content="九天的小站">
+    <!-- 浏览器标签上显示的图标 -->
+    <link rel="icon" type="image/ico" href="//sdn.geekzu.org/avatar/4cc893d113dd74ceca73f9863f2c5446/">
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="./static/style.css?v=1.1">
+    <link rel="stylesheet" href="./static/APlayer-1.10.1/dist/APlayer.min.css">
+
+    <!-- 自定义设置 -->
+    <style>
+        body {
+            /*背景图片URL 可使用随机图片API */
+            background-image: url("back.jpg");
+        }
+
+        .photo-bg {
+            /* 卡片左侧图片 */
+            background-image: url("https://bu.dusays.com/2022/06/04/629b0a2750921.jpg");
+        }
+    </style>
+    <script>
+        // 音乐设置
+        let meting_music_api = "https://api.mizore.cn/meting/api.php";// meting api
+        let music_server = "netease"; // 音乐服务：网易云 netease 参见 meting api支持的服务
+        let music_type = "playlist"; // 歌曲类型：歌单playlist 单首歌曲 song  专辑 album
+        let music_id = "20173709"; // 歌单ID或歌曲ID或者专辑ID 20173709 29732992
+        let music_order = "random"; // 音频循环顺序, 顺序播放： 'list', 随机播放：'random'
+        let music_mini = false; // mini模式 吸底模式开启后此选项实效 true / false
+        let music_fixed = false; // 吸底模式
+        let music_volume = 0.7; // 默认音量
+        let music_autoplay = false; // 自动播放
+        let music_loop = "all"; // 音频循环播放, 可选值: 'all', 'one', 'none' ，分别为全部循环，单曲循环，不循环
+        // TODO 一言设置
+    </script>
+    <!-- end 自定义设置 -->
+</head>
+
+<body>
+    <div id="main" class="container">
+        <div class="row my-card justify-content-center">
+            <div class="col-lg-4 photo-bg"></div>
+            <div class="col-lg-8 card">
+                <!-- 大标题 -->
+                <h1>九天的小站</h1>
+                <!-- 标题下的一段话 -->
+                <p>
+                    愿你前行的道路有群星闪耀，愿你留下的足迹有百花绽放。
+                </p>
+                <p id="hitokoto_text">:D 一言获取中...</p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- 导航按钮组 -->
+                        <button data-href="https://blog.jiutian.site/" data-title="九天的Blog" data-window="newtab" data-anim="4"
+                            data-area-w="80%" data-area-h="90%" data-shade="false"
+                            class="kz-nav-btn btn btn-primary col-lg-4">九天的Blog</button>
+
+                        <button data-href="http://jiutian.site/publish.html" data-title="九天网址发布页" data-window="newtab"
+                            data-anim="4" data-area-w="80%" data-area-h="90%" data-shade="false"
+                            class="kz-nav-btn btn btn-secondary col-lg-4">九天网址发布页</button>
+
+                        <button data-href="https://muyu.jiutian.site/"
+                            data-title="Blog" data-window="newtab" data-anim="4" data-area-w="80%" data-area-h="90%"
+                            data-shade="false" class="kz-nav-btn btn btn-success col-lg-4">赛博木鱼</button>
+
+                        <!-- end 导航按钮组 -->
+                    </div>
+                </div>
+                <!-- aplayer inner -->
+                <div id="aplayer-inner" class="aplayer"></div>
+                <!-- end aplayer inner -->
+                <ul class="social mt-1">
+                    <li><a href="https://weibo.com/u/7535088711"><i class="fab fa-weibo " aria-hidden="true"></i></a></li>
+                     
+	     <li><a href="https://gitee.com/jiutians" target="_blank"
+                            rel="nofollow"><img src="gitee.jpg"
+                                style="width:19.5px;"></a> <li>
+
+	   <li><a href="https://github.com/jiutian1227"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=bYsbiwZYO3SsD0xOgMQirqxpk9NocmYN&authKey=aVNcdrA7tATGzmcz13Y2KOlpy5I7je1PzJtf9I8qbOBks%2Fbn2m88dA%2BbeeSDfN%2Bz&noverify=0&group_code=529418686"><i class="fab fa-qq" aria-hidden="true"></i></a></li>
+                   
+                </ul>
+
+                <footer>
+                    <p>Copyright 2021 - 2024 <a href="    " target="_blank">   </a>
+                        <a href="https://beian.miit.gov.cn" target="_blank">冀ICP备2024047795号-1</a>
+                        <br>Copyright by
+                        <a href="https://jiutian.site/" target="_blank" rel="">JiuTian</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- aplayer -->
+    <div id="aplayer-fixed" class="aplayer"></div>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./static/APlayer-1.10.1/dist/APlayer.min.js"></script>
+    <script src="./static/Meting.min.js"></script>
+    <!-- end_aplayer -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script defer src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="./static/layer-v3.5.1/layer/layer.js"></script>
+
+    <script src="./static/main.js"></script>
+
+</html>
